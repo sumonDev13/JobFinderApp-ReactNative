@@ -10,9 +10,22 @@ const Home = () => {
     const router = useRouter();
 
     return (
-        <View>
-           <Text>Hello</Text>
-        </View>
+        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.green }}>
+        <Stack.Screen
+          options={{
+            headerStyle: { backgroundColor: COLORS.green },
+            headerShadowVisible: false,
+            headerLeft: () => (
+              <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%' />
+            ),
+            headerRight: () => (
+              <ScreenHeaderBtn iconUrl={icons.profile} dimension='100%' />
+            ),
+            headerTitle: "",
+          }}
+        />
+  
+      </SafeAreaView>
     )
 }
 
